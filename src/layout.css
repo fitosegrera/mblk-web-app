@@ -1,0 +1,15 @@
+* {
+	font-family: 'Geo', sans-serif;
+}
+
+.gradient-section-bg-dark {
+	background: linear-gradient(0deg, #551471, #f2abc6);
+}
+
+.gradient-bg-dark-secondary {
+	background: linear-gradient(0deg, #210122, #000f25);
+}
+
+.gradient-section-bg-light {
+	background: linear-gradient(0deg, #f4507b, #9c5ff3);
+}
