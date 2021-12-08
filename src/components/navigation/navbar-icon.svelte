@@ -1,24 +1,38 @@
 <script>
-	export let id, url, img_url;
+  //LIBS
+  import { Motion } from "svelte-motion";
+  import Icon from "@iconify/svelte";
 
-	const handleMouseEnter = async () => {
-		let icon = document.getElementById(id);
-		icon.style.color = 'linear-gradient(90deg, #f4507b, #9c5ff3)';
-	};
+  export let id, url;
 
-	const handleMouseLeave = async () => {
-		let icon = document.getElementById(id);
-		// underline.style.background = '#00000000';
-	};
+  const handleMouseEnter = async () => {
+    let icon = document.getElementById(id);
+    icon.style.color = "linear-gradient(90deg, #f4507b, #9c5ff3)";
+  };
+
+  const handleMouseLeave = async () => {
+    let icon = document.getElementById(id);
+    // underline.style.background = '#00000000';
+  };
 </script>
 
-<a href={url}>
-	<div {id} on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseLeave} class="w-48">
-		<img src={img_url} alt="" />
-	</div>
-</a>
+<Motion animate={{ scale: 1.25 }} transition={{ duration: 0.25 }} let:motion>
+  <a href={url}>
+    <div
+      use:motion
+      {id}
+      on:mouseenter={handleMouseEnter}
+      on:mouseleave={handleMouseLeave}
+      class="w-48"
+    >
+      <div class="text-3xl color-anim-txt">
+        <Icon icon={"akar-icons:" + id + "-fill"} />
+      </div>
+    </div>
+  </a>
+</Motion>
 
 <style>
-	div:hover {
-	}
+  div:hover {
+  }
 </style>

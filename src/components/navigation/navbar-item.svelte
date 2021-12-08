@@ -1,38 +1,46 @@
 <script>
-	export let label, id;
+  //LIBS
+  import { Motion } from "svelte-motion";
 
-	const handleMouseEnter = async () => {
-		let underline = document.getElementById(id);
-		underline.style.background = 'linear-gradient(90deg, #f4507b, #9c5ff3)';
-	};
+  export let label, id;
 
-	const handleMouseLeave = async () => {
-		let underline = document.getElementById(id);
-		underline.style.background = '#00000000';
-	};
+  const handleMouseEnter = async () => {
+    let underline = document.getElementById(id);
+    underline.style.background = "linear-gradient(90deg, #f4507b, #9c5ff3)";
+  };
+
+  const handleMouseLeave = async () => {
+    let underline = document.getElementById(id);
+    underline.style.background = "#00000000";
+  };
 </script>
 
 <div
-	id="wrapper"
-	on:mouseenter={handleMouseEnter}
-	on:mouseleave={handleMouseLeave}
-	class="text-2xl w-auto"
+  id="wrapper"
+  on:mouseenter={handleMouseEnter}
+  on:mouseleave={handleMouseLeave}
+  class="text-xl w-auto"
 >
-	<div>
-		<a href={'/' + id}>{label}</a>
-	</div>
-	<div {id} class="h-8" />
+  <Motion
+    animate={{ scale: 1.5 }}
+    transition={{ duration: 0.25 }}
+    whileHover={{ scale: 1.6 }}
+    whileTap={{ scale: 1.25 }}
+    let:motion
+  >
+    <div class="text-secondary-light color-anim-txt" use:motion>
+      <a href={"/" + id}>{label}</a>
+      <div {id} class="h-4" />
+    </div>
+  </Motion>
 </div>
 
 <style>
-	#wrapper:hover {
-		background: -webkit-linear-gradient(#f4507b, #9c5ff3);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
+  #wrapper:hover {
+  }
 
-	a {
-		font-family: 'Electrolize', sans-serif;
-		font-weight: 600;
-	}
+  a {
+    font-family: "Electrolize", sans-serif;
+    font-weight: 600;
+  }
 </style>

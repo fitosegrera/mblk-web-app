@@ -1,15 +1,148 @@
 * {
-	font-family: 'Geo', sans-serif;
+  font-family: "Geo", sans-serif;
 }
 
 .gradient-section-bg-dark {
-	background: linear-gradient(0deg, #551471, #f2abc6);
+  background: linear-gradient(0deg, #f2abc6d3, #551471ce);
+}
+
+.gradient-section-bg-dark-variant {
+  background: linear-gradient(0deg, #ffffff, #ffffff7e);
 }
 
 .gradient-bg-dark-secondary {
-	background: linear-gradient(0deg, #210122, #000f25);
+  background: linear-gradient(0deg, #210122, #000f25);
 }
 
 .gradient-section-bg-light {
-	background: linear-gradient(0deg, #f4507b, #9c5ff3);
+  background: linear-gradient(90deg, #f4507b, #9c5ff3);
+}
+
+.gradient-icons {
+  color: rgba(22, 13, 22, 0.897);
+}
+
+/*ANIMATIONS*/
+.color-anim-icon {
+  -webkit-animation: text-color-change 0.3s infinite alternate;
+}
+
+.color-anim-txt:hover {
+  -webkit-animation: text-color-change 0.3s infinite alternate;
+}
+
+@-webkit-keyframes text-color-change {
+  0% {
+    color: blue;
+  }
+  10% {
+    color: #8e44ad;
+  }
+  20% {
+    color: #1abc9c;
+  }
+  30% {
+    color: #d35400;
+  }
+  40% {
+    color: blue;
+  }
+  50% {
+    color: #34495e;
+  }
+  60% {
+    color: blue;
+  }
+  70% {
+    color: #2980b9;
+  }
+  80% {
+    color: #f1c40f;
+  }
+  90% {
+    color: #2980b9;
+  }
+  100% {
+    color: pink;
+  }
+}
+
+.color-anim-bg:hover {
+  -webkit-animation: bg-color-change 0.3s infinite alternate;
+}
+
+@-webkit-keyframes bg-color-change {
+  0% {
+    background: rgba(0, 0, 255, 0.568);
+  }
+  10% {
+    background: #8d44ada9;
+  }
+  20% {
+    background: #1abc9c85;
+  }
+  30% {
+    background: #d35400ad;
+  }
+  40% {
+    background: rgba(0, 0, 255, 0.671);
+  }
+  50% {
+    background: #34495e9a;
+  }
+  60% {
+    background: rgba(0, 0, 255, 0.507);
+  }
+  70% {
+    background: #297fb99f;
+  }
+  80% {
+    background: #f1c40f9a;
+  }
+  90% {
+    background: #297fb9c9;
+  }
+  100% {
+    background: rgba(255, 192, 203, 0.808);
+  }
+}
+
+.color-anim-shadow {
+  -webkit-animation: shadow-color-change 0.3s infinite alternate;
+}
+
+@-webkit-keyframes shadow-color-change {
+  0% {
+    box-shadow: 0.5rem 0.75rem 0rem rgba(0, 0, 255, 0.568);
+  }
+  10% {
+    box-shadow: 0.5rem 0.75rem 0rem #8d44ada9;
+  }
+  20% {
+    box-shadow: 0.5rem 0.75rem 0rem #1abc9c85;
+  }
+  30% {
+    box-shadow: 0.5rem 0.75rem 0rem #d35400ad;
+  }
+  40% {
+    box-shadow: 0.5rem 0.75rem 0rem rgba(0, 0, 255, 0.671);
+  }
+  50% {
+    box-shadow: 0.5rem 0.75rem 0rem #34495e9a;
+  }
+  60% {
+    box-shadow: 0.5rem 0.75rem 0rem rgba(0, 0, 255, 0.507);
+  }
+  70% {
+    box-shadow: 0.5rem 0.75rem 0rem #297fb99f;
+  }
+  80% {
+    box-shadow: 0.5rem 0.75rem 0rem #f1c40f9a;
+  }
+  90% {
+    box-shadow: 0.5rem 0.75rem 0rem #297fb9c9;
+  }
+  100% {
+    box-shadow: 0.5rem 0.75rem 0rem rgba(255, 192, 203, 0.808);
+  }
 }
