@@ -7,11 +7,11 @@
 }
 
 .gradient-section-bg-dark-variant {
-  background: linear-gradient(0deg, #ffffff, #ffffff7e);
+  background: linear-gradient(0deg, #551471ce, #ffc5c57e);
 }
 
 .gradient-bg-dark-secondary {
-  background: linear-gradient(0deg, #210122, #000f25);
+  background: linear-gradient(0deg, #000000, #37064b);
 }
 
 .gradient-section-bg-light {
@@ -19,7 +19,13 @@
 }
 
 .gradient-icons {
-  color: rgba(22, 13, 22, 0.897);
+  color: #e0c7e09d;
+}
+
+.gradient-text-light {
+  background: -webkit-linear-gradient(#e3ff89, #f2abc6d3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*ANIMATIONS*/

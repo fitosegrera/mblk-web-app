@@ -1,7 +1,8 @@
 <script>
   import { memoryData } from "../../../stores/stores";
-  import { page } from "$app/stores";
   import { onMount } from "svelte";
+
+  export let sketch_name;
 
   let e;
   let memory_data = [];
@@ -12,13 +13,12 @@
     currentMemoryData = memory_data[0];
 
     console.log(currentMemoryData);
-    const three = await import("./scene");
+    const three = await import("./" + sketch_name + "");
     three.createScene(e, currentMemoryData);
   });
-
-  const scriptLoaded = async () => {};
 </script>
 
+<div id="container" />
 <canvas bind:this={e} />
 
 <style>
@@ -27,6 +27,7 @@
   }
   canvas {
     position: absolute;
+
     top: 0;
     left: 0;
   }

@@ -9,7 +9,7 @@
   //STORES
   import { memoryData, dataUrl } from "../stores/stores";
 
-  let heroHeading = "a %%metaverse%%created, literally, by your own mind";
+  let heroHeading = "A %%metaverse%%created, literally, by your own mind";
   //let heroHeading = "Welcome to mindblocks %%[mblk]%%, the first CNFT plattform for collecting mental data.";
 
   const fetchData = async () => {

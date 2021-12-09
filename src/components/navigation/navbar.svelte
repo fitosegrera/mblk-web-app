@@ -5,10 +5,10 @@
 
 <div class="text-secondary-light w-full px-240 ">
   <nav class="flex w-full py-32 items-center space-x-120 justify-center">
-    <div class="flex  h-72">
-      <img src="/assets/imgs/logo.png" alt="" />
+    <div class="flex h-72">
+      <img src="/assets/imgs/logo.png" alt="metamind logo" />
     </div>
-    <div class="flex space-x-96">
+    <div class="flex space-x-96 pt-16">
       <Item label="About" id="about" />
       <Item label="White Paper" id="white-paper" />
       <Item label="1st Edition" id="edition-1" />

@@ -7,43 +7,32 @@
   import DiscordButton from "../../buttons/retro/discord.svelte";
   import Sketch from "../../sketches/threejs/three-js-viewer.svelte";
 
-  //STORES
-  import { memoryData } from "../../../stores/stores";
-
   //PROPS
   export let heading;
 </script>
 
 <div class="h-screen" />
-<div id="wrapper" class="w-auto mx-240 pt-160">
-  <h1 class="text-10xl text-center leading-10xl text-secondary-light">
+<div id="wrapper" class="w-auto mx-240 pt-240">
+  <h1 class="text-12xl text-center leading-10xl text-secondary-light">
     {heading.split("%%")[0]}
     <span class="color-anim-icon">{heading.split("%%")[1]}</span>
     {heading.split("%%")[2]}
   </h1>
 
-  <div class="flex justify-center space-x-48">
+  <div class="flex justify-center space-x-48 mt-56">
     <WhitePaperButton />
     <TwitterButton />
     <DiscordButton />
   </div>
 
-  <div class="flex flex-grow h-56 mt-96 space-x-64 justify-center">
-    <img src="/assets/imgs/openbci.png" alt="" />
-    <img src="/assets/imgs/cardano.png" alt="" />
-  </div>
-
-  <div
-    class="flex justify-center mt-72 h-120 text-10xl text-primary-main animate-bounce"
-  >
+  <div class="flex justify-center mt-160 h-120  animate-bounce">
     <img src="/assets/imgs/chevron-down.svg" alt="" />
   </div>
 </div>
 
-<Sketch />
+<Sketch sketch_name="terrain" />
 
-<div id="alpha-layer" />
-
+<!-- <div id="alpha-layer" /> -->
 <style>
   #wrapper {
     position: absolute;
